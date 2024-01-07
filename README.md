@@ -24,7 +24,7 @@ ORDER BY
   AVG("BETAMOUNT") DESC;
 ```
 
-###Monthly Casino Revenue
+### Monthly Casino Revenue
 
 ![House Revenue](House%20Revenue.png)
 
@@ -84,7 +84,7 @@ apex.jQuery(function($) {
 ```
 
 
-###Misc
+### Misc
 
 The following was used to run a diagnotsit for extracting elements from a container. Helpful with newer projects and manipulating elements manually.
 // Diagnostic script to log information about the chart's text elements

@@ -1,6 +1,7 @@
 ## Overview
 
 This document outlines the Oracle APEX application that was developed to visualize and analyze casino activities. The dashboard provides a graphical representation of data related to game types, monthly revenue, and player statistics.
+![Casino Activities Main](Casino%20Activities%20Main.png)
 
 ## SQL Queries
 

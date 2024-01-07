@@ -1,12 +1,14 @@
 ## Overview
 
 This document outlines the Oracle APEX application that was developed to visualize and analyze casino activities. The dashboard provides a graphical representation of data related to game types, monthly revenue, and player statistics.
+
 ![Casino Activities Main](Casino%20Activities%20Main.png)
 
 ## SQL Queries
 
 ### Average Bet by Game Type
 
+![GameType](GameType.png)
 
 To analyze the betting patterns across different games, we use the following SQL query to calculate the average bet amount for each game type. The results are ordered by the average bet in descending order to identify which games have the highest stakes.
 
@@ -24,6 +26,8 @@ ORDER BY
 
 ###Monthly Casino Revenue
 
+![House Revenue](House%20Revenue.png)
+
 Understanding the revenue trends is crucial for the casino's financial analysis. The following SQL query provides the net revenue for each month by summing up the win/loss amounts.
 
 ```sql
@@ -39,6 +43,9 @@ ORDER BY
 ```
 
 ### Top Frequent Player Nets
+
+![Top Frequent Player Nets](Top%20Frequent%20Player%20Nets.png)
+
 Identifying the players who frequent the casino the most and their net winnings is valuable for customer relationship management. This SQL query selects the top 10 players based on the frequency of their visits and their total winnings. The JavaScript snippet  is used to prepend a ranking number to player IDs on the chart. This helps in quickly identifying the top players in the visual representation.
 
 ```sql
@@ -97,3 +104,11 @@ if (chartContainer) {
   console.log('Chart container not found.');
 }
 ```
+
+### Other Reports
+
+Searches through the example data generated as well as the data itself all available for viewing and running new dynamic reports.
+
+![APEX 3](APEX_3.png)
+
+![APEX 4](APEX_4.png)

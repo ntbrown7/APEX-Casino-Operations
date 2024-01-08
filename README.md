@@ -1,16 +1,47 @@
-# Overview
+# Oracle APEX Casino Activity Dashboard
 
-This document outlines the Oracle APEX application that was developed to visualize and analyze casino activities. The dashboard provides a graphical representation of data related to game types, monthly revenue, and player statistics.
+## Table of Contents
+- [Overview](#overview)
+- [Dashboard Visualizations](#dashboard-visualizations)
+  - [Average Bet by Game Type](#average-bet-by-game-type)
+  - [Monthly Casino Revenue](#monthly-casino-revenue)
+  - [Top Frequent Player Nets](#top-frequent-player-nets)
+- [SQL Queries](#sql-queries)
+- [JavaScript Code](#javascript-code)
+- [Diagnostic Script](#diagnostic-script)
+- [Additional Reports](#additional-reports)
 
-![Casino Activities Main](Casino%20Activities%20Main.png)
+## Overview
 
-# Dashboard Section with SQL Queries and JS
+This document presents the Oracle APEX application designed to visualize and analyze various activities within a casino setting. The dashboard depicted below offers a graphical representation of data related to game types, monthly revenue, and player statistics.
+
+![Casino Activities Main Dashboard](Casino%20Activities%20Main.png)
+
+*Figure 1: Main Dashboard Visualizing Casino Activities*
+
+## Dashboard Visualizations
 
 ### Average Bet by Game Type
 
-![GameType](GameType.png)
+![Average Bet by Game Type](GameType.png)
 
-To analyze the betting patterns across different games, we use the following SQL query to calculate the average bet amount for each game type. The results are ordered by the average bet in descending order to identify which games have the highest stakes.
+*Figure 2: Bar chart displaying the average bet amount by game type.*
+
+### Monthly Casino Revenue
+
+![Monthly Casino Revenue](House%20Revenue.png)
+
+*Figure 3: Line graph showing the monthly revenue trend.*
+
+### Top Frequent Player Nets
+
+![Top Frequent Player Nets](Top%20Frequent%20Player%20Nets.png)
+
+*Figure 4: Bar chart of the top frequent players' net winnings.*
+
+## SQL Queries
+
+#### Query for Average Bet by Game Type
 
 ```sql
 SELECT
@@ -23,12 +54,7 @@ GROUP BY
 ORDER BY
   AVG("BETAMOUNT") DESC;
 ```
-
-### Monthly Casino Revenue
-
-![House Revenue](House%20Revenue.png)
-
-Understanding the revenue trends is crucial for the casino's financial analysis. The following SQL query provides the net revenue for each month by summing up the win/loss amounts.
+#### Query for Monthly Casino Revenue
 
 ```sql
 SELECT
@@ -42,11 +68,7 @@ ORDER BY
   "MONTH" ASC;
 ```
 
-### Top Frequent Player Nets
-
-![Top Frequent Player Nets](Top%20Frequent%20Player%20Nets.png)
-
-Identifying the players who frequent the casino the most and their net winnings is valuable for customer relationship management. This SQL query selects the top 10 players based on the frequency of their visits and their total winnings. The JavaScript snippet  is used to prepend a ranking number to player IDs on the chart. This helps in quickly identifying the top players in the visual representation.
+#### Query for Top Frequent Player Nets
 
 ```sql
 SELECT
@@ -61,8 +83,12 @@ ORDER BY
   "Frequency" DESC
 FETCH FIRST 10 ROWS ONLY;
 ```
+
+## JavaScript Code
+
+The JavaScript snippet below is utilized to enhance the chart's interactivity by appending a ranking to player IDs.
+
 ```javascript
-// Assign X Values
 // Ensure this runs after the chart is fully rendered
 apex.jQuery(function($) {
   // Target the chart container by its Static ID
@@ -75,21 +101,18 @@ apex.jQuery(function($) {
   textElements.each(function(index) {
     if (index >= 10) { // Assuming index 10 and onwards are the Player IDs
       var currentText = $(this).text();
-      var newText = '#' + (index - 9) + ' ID' + currentText; // index - 9 to start counting from 1
+      var newText = '#' + (index - 9) + ' ' + currentText; // index - 9 to start counting from 1
       $(this).text(newText);
     }
   });
 });
-
 ```
 
-
-### Misc
-
-The following was used to run a diagnotsit for extracting elements from a container. Helpful with newer projects and manipulating elements manually.
-// Diagnostic script to log information about the chart's text elements
+#### Diagnostic Script
+For debugging purposes, this script can be run to extract information from the chart's text elements, providing valuable insights for developers.
 
 ```javascript
+// Diagnostic script to log information about the chart's text elements
 var chartContainer = document.querySelector('#ENTERCONTAINERIDHERE');
 if (chartContainer) {
   console.log('Chart container found:', chartContainer);
@@ -105,10 +128,13 @@ if (chartContainer) {
 }
 ```
 
-### Other Reports
+## Additional Reports
 
-Searches through the example data generated as well as the data itself all available for viewing and running new dynamic reports.
+Figure 5: An additional report showcasing various player statistics.
 
 ![APEX 3](APEX_3.png)
+
+
+Figure 6: A detailed report on different casino game activities.
 
 ![APEX 4](APEX_4.png)

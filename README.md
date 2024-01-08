@@ -19,6 +19,7 @@ This document presents the Oracle APEX application designed to visualize and ana
 
 *Figure 1: Main Dashboard Visualizing Casino Activities*
 
+
 ## Dashboard Visualizations
 
 ### Average Bet by Game Type
@@ -27,17 +28,20 @@ This document presents the Oracle APEX application designed to visualize and ana
 
 *Figure 2: Bar chart displaying the average bet amount by game type.*
 
+
 ### Monthly Casino Revenue
 
 ![Monthly Casino Revenue](House%20Revenue.png)
 
 *Figure 3: Line graph showing the monthly revenue trend.*
 
+
 ### Top Frequent Player Nets
 
 ![Top Frequent Player Netting](Top%20Frequent%20Player%20Netting.png)
 
 *Figure 4: Bar chart of the top frequent players' net winnings.*
+
 
 ## SQL Queries
 
@@ -54,6 +58,7 @@ GROUP BY
 ORDER BY
   AVG("BETAMOUNT") DESC;
 ```
+
 #### Query for Monthly Casino Revenue
 
 ```sql
@@ -84,6 +89,7 @@ ORDER BY
 FETCH FIRST 10 ROWS ONLY;
 ```
 
+
 ## JavaScript Code
 
 The JavaScript snippet below is utilized to enhance the chart's interactivity by appending a ranking to player IDs.
@@ -108,6 +114,7 @@ apex.jQuery(function($) {
 });
 ```
 
+
 #### Diagnostic Script
 For debugging purposes, this script can be run to extract information from the chart's text elements, providing valuable insights for developers.
 
@@ -127,6 +134,7 @@ if (chartContainer) {
   console.log('Chart container not found.');
 }
 ```
+
 
 ## Additional Reports
 

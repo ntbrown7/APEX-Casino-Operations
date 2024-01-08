@@ -13,7 +13,7 @@
 
 ## Overview
 
-This document presents the Oracle APEX application designed to visualize and analyze various activities within a casino setting. The dashboard depicted below offers a graphical representation of data related to game types, monthly revenue, and player statistics.
+This document showcases the Oracle APEX application, a key software solution designed to visualize and analyze various activities within a casino setting. The application serves as a testament to the Application Engineer's role in advancing the Global Casino Team’s objectives of increasing process automation, operational efficiency, and effectiveness. By providing a graphical representation of data related to game types, monthly revenue, and player statistics, the dashboard aligns seamlessly with the essential functions of the role.
 
 *Figure 1: Main Dashboard Visualizing Casino Activities*
 ![Casino Activities Main Dashboard](Casino%20Activities%20Main.png)

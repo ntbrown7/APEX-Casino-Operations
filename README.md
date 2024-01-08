@@ -35,7 +35,7 @@ This document presents the Oracle APEX application designed to visualize and ana
 
 ### Top Frequent Player Nets
 
-![Top Frequent Player Nets](Top%20Frequent%20Player%20Nets.png)
+![Top Frequent Player Netting](Top%20Frequent%20Player%20Netting.png)
 
 *Figure 4: Bar chart of the top frequent players' net winnings.*
 

@@ -15,32 +15,34 @@
 
 This document presents the Oracle APEX application designed to visualize and analyze various activities within a casino setting. The dashboard depicted below offers a graphical representation of data related to game types, monthly revenue, and player statistics.
 
+*Figure 1: Main Dashboard Visualizing Casino Activities*
 ![Casino Activities Main Dashboard](Casino%20Activities%20Main.png)
 
-*Figure 1: Main Dashboard Visualizing Casino Activities*
+
 
 
 ## Dashboard Visualizations
 
 ### Average Bet by Game Type
 
+*Figure 2: Bar chart displaying the average bet amount by game type.*
 ![Average Bet by Game Type](GameType.png)
 
-*Figure 2: Bar chart displaying the average bet amount by game type.*
+
 
 
 ### Monthly Casino Revenue
 
-![Monthly Casino Revenue](House%20Revenue.png)
-
 *Figure 3: Line graph showing the monthly revenue trend.*
+![Monthly Casino Revenue](House%20Revenue.png)
 
 
 ### Top Frequent Player Nets
 
+*Figure 4: Bar chart of the top frequent players' net winnings.*
 ![Top Frequent Player Netting](Top%20Frequent%20Player%20Netting.png)
 
-*Figure 4: Bar chart of the top frequent players' net winnings.*
+
 
 
 ## SQL Queries

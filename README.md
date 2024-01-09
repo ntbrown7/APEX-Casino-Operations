@@ -13,7 +13,7 @@
 
 ## Overview
 
-Data displayed was generated via python script locally.(generate_mock_casino.py)
+*The CSV the following data below is based on was generated via python script locally.(generate_mock_casino.py) This is simply based on a  version of a csv that one may see in a casino operation database. Of course, the extraction methods would remain quite similar regardless. All that would need to change is the parsing/extraction method of the SQL queries. *
 
 This document showcases the Oracle APEX application, a key software solution designed to visualize and analyze various activities within a casino setting. The application serves as a testament to the Application Engineer's role in advancing the Global Casino Team’s objectives of increasing process automation, operational efficiency, and effectiveness. By providing a graphical representation of data related to game types, monthly revenue, and player statistics, the dashboard aligns seamlessly with the essential functions of the role. 
 

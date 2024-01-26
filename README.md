@@ -94,9 +94,9 @@ FETCH FIRST 10 ROWS ONLY;
 ```
 
 
-## JavaScript Code
+## JQuery Code
 
-The JavaScript snippet below is utilized to enhance the chart's interactivity by appending a ranking to player IDs.
+The Jquery snippet below is utilized to enhance the chart's interactivity by appending a ranking to player IDs.
 
 ```javascript
 // Ensure this runs after the chart is fully rendered
